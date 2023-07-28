@@ -1,9 +1,10 @@
 import Image from "next/image";
+import AuthForm from "@/app/(site)/components/AuthForm";
 
 export default function Home() {
-    return (
-        <div
-            className="
+  return (
+    <div
+      className="
        flex
        min-h-full
        flex-col
@@ -13,21 +14,33 @@ export default function Home() {
        lg:px-8
        bg-gray-100
        "
-        >
-            <div className="
+    >
+      <div
+        className="
             sm:mx-auto sm:w-full sm:max-w-md
-            ">
-                <Image className="mx-auto w-auto" height="48" width="48" src="/images/logo.png" alt="messanger logo"/>
-                <h2 className="
+            "
+      >
+        <Image
+          className="mx-auto w-auto"
+          height="48"
+          width="48"
+          src="/images/logo.png"
+          alt="messanger logo"
+        />
+        <h2
+          className="
                 mt-6
                 text-center
                 text-3xl
                 font-bold
                 tracking-tight
                 text-gray-900
-                ">Sign in to your account</h2>
-            </div>
-            {/* auth component*/}
-        </div>
-    )
+                "
+        >
+          Sign in to your account
+        </h2>
+      </div>
+      <AuthForm />
+    </div>
+  );
 }
